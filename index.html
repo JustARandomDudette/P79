@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<h1>My Family Book</h1>
+<title>P79</title>
+<body>
+<center>
+    <img id="image_names" src = "https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg" />
+    <br>
+    <p id = "display_names"></p>
+    <br>
+    <button type = "button" onclick = "next()">Click Me To See The Next Member</button>
+</center>
+<script>
+     var names = [];
+        names = ["Dileep Chitar" , "Sonia Chitar" , "Padma Chitar"];
+        var totalimages = [];
+        totalimages = ["https://image.shutterstock.com/image-vector/working-mom-260nw-158801597.jpg" , "https://image.shutterstock.com/image-vector/portrait-handsome-man-shirt-jeans-260nw-582282625.jpg" , "https://image.shutterstock.com/image-vector/cute-thinking-woman-looking-away-260nw-439245706.jpg"];
+
+
+
+    function next() {
+        for (var i = 0; i<names.length(); i++) {
+          console.log(names[i]);
+          //to change the name
+          document.getElementById("display_names").innerHTML = names[i];
+          //to change the image
+          image_names.setAttribute("src" , totalimages[i]);
+        }
+    }
+</script>
+</body>
+</html>
